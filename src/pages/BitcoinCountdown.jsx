@@ -3,7 +3,7 @@ import axios from "axios";
 import { FaBitcoin } from "react-icons/fa";
 import CountDownComponent from "../components/CountDownComponent";
 import Loader from "../components/Loader";
-import "../styles/bitCoinCountdown.css";
+import "../styles/bitcoinCountdown.css";
 import { calculateFutureDate } from "../utils/calculateFutureDate";
 import { startCountdown } from "../utils/startCountdown";
 

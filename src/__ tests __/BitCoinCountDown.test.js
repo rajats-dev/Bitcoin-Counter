@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import BitcoinCountdown from "../BitCoinCountdown/BitcoinCountdown";
+import { render, screen, waitFor } from "@testing-library/react";
+import BitcoinCountdown from "../pages/BitcoinCountdown";
 import { calculateFutureDate } from "../utils/calculateFutureDate";
 import CountDownComponent from "../components/CountDownComponent";
 

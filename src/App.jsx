@@ -1,4 +1,4 @@
-import BitcoinCountdown from "./BitCoinCountdown/BitcoinCountdown";
+import BitcoinCountdown from "./pages/BitcoinCountdown";
 
 function App() {
   return (

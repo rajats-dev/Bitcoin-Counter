@@ -14,3 +14,10 @@
 1. Project follows proper file structure, navigate to files know more about the code.
 2. I have provided explaination comments in the code where it is required.
 3. Here I used React Framework with tailwind for styling, axios for data feching, jest library for testing.
+
+## Checklist
+
+- [x] Code accompanies the Unit Tests
+- [x] Usage is clearly mentioned in the README file, This including setup the project, how to run it, how to run unit test.
+- [x] Uses the endpoint directly
+- [x] Feel good factor UI/UX

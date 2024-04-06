@@ -3,7 +3,7 @@ import axios from "axios";
 import { FaBitcoin } from "react-icons/fa";
 import CountDownComponent from "../components/CountDownComponent";
 import Loader from "../components/Loader";
-import "../styles/bitcoinCountdown.css";
+import "../styles/bitCoinCountdown.css";
 import { calculateFutureDate } from "../utils/calculateFutureDate";
 import { startCountdown } from "../utils/startCountdown";
 
@@ -11,7 +11,7 @@ const BitcoinCountdown = () => {
   const [blockHeight, setBlockHeight] = useState(null);
   const [countdown, setCountdown] = useState(null);
   const [predictDate, setPredictedDate] = useState("");
-  const [blocksRemains, setBlocksRemains] = useState("");
+  const [blocksRemains, setBlocksRemains] = useState(0);
   const [bitCoinPrice, setBitCoinPrice] = useState(0);
   const [fetchInterval, setFetchInterval] = useState(null);
 
@@ -121,7 +121,7 @@ const BitcoinCountdown = () => {
               Blocks Remaining
             </span>
             <span className="text-[#05c37c] text-2xl font-semibold bg-[#121419]">
-              {blocksRemains ? blocksRemains : <Loader />}
+              {blocksRemains ? blocksRemains.toLocaleString() : <Loader />}
             </span>
             <div className="flex w-full items-center justify-center bg-[#121419]">
               <span className="w-14 h-1 m-4 bg-[#172b28]"></span>
@@ -140,7 +140,7 @@ const BitcoinCountdown = () => {
             <FaBitcoin className="text-[#cac9c9]" /> BitCoin Price
           </span>
           <span className="text-[#05c37c] text-2xl font-semibold bg-[#121419]">
-            {bitCoinPrice ? `$${bitCoinPrice}` : <Loader />}
+            {bitCoinPrice ? `$${bitCoinPrice.toLocaleString()}` : <Loader />}
           </span>
           <div className="flex w-full items-center justify-center bg-[#121419]">
             <span className="w-full h-1 m-4 bg-[#172b28]"></span>
@@ -157,7 +157,11 @@ const BitcoinCountdown = () => {
             Current Block height
           </span>
           <span className="text-[#05c37c] text-2xl font-semibold bg-[#121419]">
-            {blockHeight ? blockHeight.n_blocks_total : <Loader />}
+            {blockHeight ? (
+              blockHeight.n_blocks_total.toLocaleString()
+            ) : (
+              <Loader />
+            )}
           </span>
           <span className="bg-[#172b28] block w-full h-1 mb-3"></span>
         </div>

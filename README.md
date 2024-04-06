@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-1. Clone repository to your local machine: `git clone URL`.
+1. Clone repository to your local machine: `git clone https://github.com/rajats-dev/Bitcoin-Counter.git`.
 2. Navigate to the project directory: `cd.. Bitcoin Counter`.
 3. Node Version >= `v20.11.1`.
 4. Install dependencies: `npm install` or `yarn install`.
